@@ -1,6 +1,6 @@
 {
   "name": "websocket2tcpsocket",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "websocket2tcpsocket",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,8 @@
   "homepage": "https://github.com/fananchong/websocket2tcpsocket#readme",
   "dependencies": {
     "ws": "^5.1.0"
+  },
+  "devDependencies": {
+    "express": "^4.16.3"
   }
 }

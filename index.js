@@ -9,12 +9,8 @@ function W2T () {}
 
 var proto = W2T.prototype
 
-proto.start = function (wip, wport, tip, tport) {
-  var wss = new WebSocket.Server({
-    host: wip,
-    port: wport
-  })
-
+proto.start = function (wsOptions, tip, tport) {
+  var wss = new WebSocket.Server(wsOptions)
   wss.on('connection', function connection (ws) {
     var tc = net.connect({
       host: tip,
@@ -23,7 +19,7 @@ proto.start = function (wip, wport, tip, tport) {
       console.log('connected to tcp server. ip =', tip, 'port =', tport)
     })
     tc.on('data', function (data) {
-      console.log('tcp socket received: %s', data)
+      // console.log('tcp socket received: %s', data)
       try {
         ws.send(data)
       } catch (e) {
@@ -42,7 +38,7 @@ proto.start = function (wip, wport, tip, tport) {
     })
 
     ws.on('message', function (message) {
-      console.log('websocket client received: %s', message)
+      // console.log('websocket client received: %s', message)
       tc.write(message)
     })
     ws.on('close', function (code, reason) {
