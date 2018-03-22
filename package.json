@@ -1,0 +1,30 @@
+{
+  "name": "websocket2tcpsocket",
+  "version": "1.0.0",
+  "description": "websocket2tcpsocket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fananchong/websocket2tcpsocket.git"
+  },
+  "keywords": [
+    "websocket",
+    "tcp",
+    "websocket proxy",
+    "proxy",
+    "nodejs",
+    "html"
+  ],
+  "author": "fananchong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fananchong/websocket2tcpsocket/issues"
+  },
+  "homepage": "https://github.com/fananchong/websocket2tcpsocket#readme",
+  "dependencies": {
+    "ws": "^5.1.0"
+  }
+}
