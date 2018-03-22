@@ -1,6 +1,6 @@
 {
   "name": "websocket2tcpsocket",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "websocket2tcpsocket",
   "main": "index.js",
   "scripts": {

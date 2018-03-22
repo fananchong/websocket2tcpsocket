@@ -15,7 +15,7 @@ npm install websocket2tcpsocket --save
 ```js
 var W2T = require('../index.js')
 var w2t = new W2T()
-w2t.start('localhost', 8000, 'localhost', 8888)
+w2t.start('localhost', 8000)
 ```
 
 详细可以参见 [test1](test/test1.js)
@@ -34,13 +34,30 @@ app.use(function (req, res) {
 })
 const server = http.createServer(app)
 const w2t = new W2T()
-w2t.start({server}, 'localhost', 12345)
+w2t.start({server})
 server.listen(8000, function listening () {
   console.log('Listening on %d', server.address().port)
 })
 ```
 
 详细可以参见 [test2](test/test2.js)
+
+## websocket客户端说明
+
+首条消息，需要告知W2T，打通哪个地址。
+
+这样每个websocket都可以发往不同的tcp服务器。更加灵活。
+
+例如：
+
+```js
+ws.on('open', function open() {
+  // 首条消息，打通tcp链路。
+  ws.send('{"tip":"localhost", "tport":12345}');
+  ws.send(String(random()));
+});
+```
+
 
 ## 编写目的
 
