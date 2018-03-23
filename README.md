@@ -65,6 +65,8 @@ github上有不少 websocket proxy。
 
 但是都是以可执行方式提供。不方便内嵌整合进现有web服务中。
 
+且都是目的TCP服务器配置唯一。不方便每个websocket，需要到不同TCP服务器的情况。
+
 本库，目的有以下：
 
 -   以库方式提供，方便直接内嵌入web service中。
