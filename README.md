@@ -15,7 +15,7 @@ npm install websocket2tcpsocket --save
 ```js
 var W2T = require('../index.js')
 var w2t = new W2T()
-w2t.start('localhost', 8000)
+w2t.start({ host: 'localhost', port: 8000 })
 ```
 
 详细可以参见 [test1](test/test1.js)
